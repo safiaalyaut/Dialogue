@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  background:#805b04;
+  color: #333;
+}
+
+section {
+  margin: 100px auto;
+  font-family: 'Cormorant Garamond', serif;
+  width: 800px;
+  border-radius: 16px;
+  padding: 100px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  height: 200px;
+  border: 2px solid #FF5B22;
+  
+}
+
+input[type="text"] {
+  position: relative;
+  padding: 20px;
+  width: 40%;
+  border: 10px solid #FF5B22;
+  border-radius: 20px;
+  font-size: 20px;
+  right: 20px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+button {
+  padding: 12px 30px;
+  background: #b39916;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  font-weight: bold;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background 0.6s;
+}
+
+button:hover {
+  background: #FF5B22;
+}
+
+.section-title {
+  font-size: 50px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: bold;
+  color: #FF5B22;
+  margin-top: 10px; /* Add spacing between the image and text */
+  position: absolute; /* Allows precise positioning */
+  top: -20px; /* Adjust vertical position */
+  left: 40px; /* Move the paragraph to the left */
+  text-align: left;
+}
+  .paragraph1 {
+    top: 20px;
+    right: 50px; /* Adjust the horizontal position */
+    font-size: 20px; /* Optional: Adjust font size */
+    font-family: 'Cormorant Garamond', serif;
+    color:#fbfadf; /* Optional: Change text color */ /* Set a maximum width to control line length */
+    text-align: left;
+  }
+
+  .subtitle {
+    font-size: 25px; /* Adjust font size */
+    color: #fbfadf; /* Text color */
+    font-weight: bold;
+    margin-top: 1px; /* Add spacing above */
+    position: absolute; /* Allows precise positioning */
+    top: 30px; /* Adjust vertical position */
+    right: 70px; /* Move the subtitle to the right side */
+    text-align: left; /* Align text to the right */
+  }
+
+  .paragraph2 {
+    position: relative; /* Position it relative to its normal flow */
+    margin-top: 10px; /* Add spacing below #section1 */
+    font-size: 60px; /* Adjust font size */
+    color: #fbfadf; /* Text color */
+    text-align: center; /* Align text to the left */;
+  }
+  .scroll-effect {
+    color: #fbfadf; /* Default text color */
+    transition: color 3s ease; /* Smooth color transition */
+  }
+  
+  .scroll-effect.in-view {
+    color: #FF5B22; /* Color when the word is in view */
+  }
+
+.logo {
+  position: fixed; /* Fix the image to the viewport */
+  top: 70px; /* Position it at the top */
+  left: 20px; /* Adjust horizontal position as needed */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+
+#logo {
+  display: block; /* Ensure the logo is treated as a block element */
+  margin: 0 auto; /* Center the logo horizontally */
+}
+
+#poster1 {
+  display: block; /* Ensure the poster is treated as a block element */
+  margin: 20px auto; /* Add spacing and center the poster horizontally */
+}
+#poster2 {
+  display: block; /* Ensure the poster is treated as a block element */
+  margin: 20px auto; /* Center horizontally */
+  width: 1000px; /* Match the width of poster1 */
+  height: 500px; /* Match the height of poster1 */
+  position: relative; /* Ensure it is positioned relative to its normal flow */
+}
+.rectangle-table {
+  display: flex; /* Arrange boxes horizontally */
+  border: 2px solid  #b39916; /* Add a stroke (border) */
+  border-radius: 10px; /* Optional: Rounded corners */
+  padding: 5px; /* Add padding inside the rectangle */
+  width: 1000px; /* Set the width of the rectangle */
+  height: 90px; /* Set the height of the rectangle */
+  margin: 20px auto 0 auto; /* Add top margin to position it below the logo */
+  background: none; /* Ensure no fill color */
+  position: relative; /* Position relative to the body */
+}
+
+.box {
+  flex: 1; /* Make all boxes equal in width */
+  border-left: 1px solid #b39916; /* Add a vertical line between boxes */
+  text-align: center; /* Center the text inside the box */
+  display: flex; /* Use flexbox for vertical centering */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  font-family: 'Cormorant Garamond', serif; /* Optional: Set font */
+  font-size: 22px; /* Adjust font size */
+  color:#fbfadf; /* Text color */
+}
+
+.box:first-child {
+  border-left: none; /* Remove the left border from the first box */
+}
+
+
+/* Slider container */
+.slider {
+  position: relative; /* Position relative to the parent container */
+  width: 300px; /* Width of the slider container */
+  height: 20px; /* Height of the slider container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -40px; /* Add spacing above the slider */
+}
+
+/* Slider line */
+.slider-line {
+  position: relative;
+  height: 4px; /* Thickness of the line */
+  width: 100%; /* Full width of the slider container */
+  background: linear-gradient(to right, #b39916, rgba(255, 91, 34, 1)); /* Gradient from light to dark */
+  border-radius: 2px;
+}
+
+/* Slider diamond */
+.slider-diamond {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #FF5B22; /* Diamond color */
+  outline:#b39916 solid 1px;
+  transform: rotate(45deg); /* Rotate to make it a diamond shape */
+  cursor: pointer;
+  left: 0; /* Initial position at the start of the slider */
+  top: 50%; /* Center the diamond vertically on the slider line */
+  transform: translate(-50%, -50%) rotate(45deg); /* Adjust for proper alignment */
+}
+
+.slider-label {
+  position: absolute;
+  font-family: 'Cormorant Garamond', serif; /* Match the font style */
+  font-size: 16px; /* Adjust font size */
+  color: #fbfadf; /* Text color */
+  top: 30px; /* Position below the slider line */
+}
+
+.slider-label.left {
+  left: 0; /* Align to the left end of the slider */
+  transform: translateX(-50%); /* Center the text horizontally */
+}
+
+.slider-label.right {
+  right: 0; /* Align to the right end of the slider */
+  transform: translateX(50%); /* Center the text horizontally */
+}
+

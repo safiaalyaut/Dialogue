@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diamond Node Sections</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite:wght@400&display=swap" rel="stylesheet">
+  <style>
+    section {
+      height: 100vh;
+      position: relative;
+    }
+    .input-area {
+      position: absolute;
+      top: 20px;
+      right: 5px;
+      z-index: 10px;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    canvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img id="logo" src="logo language lab.png" alt="Description" width="200" height="120">
+    <img id="poster1" src="poster1.jpg" alt="Description" width="1000" height="500">
+    <p class="subtitle">Where language learning meets reality. <br> Not a chatbot.</p>
+    <img class="section-title" id="dialogue" src="logo dialogue.png" alt="Dialogue" width="300" height="200">
+    </div>
+  
+    <div class="rectangle-table">
+      <div class="box">1. Read the context in the central diamond</div>
+      <div class="box">2. Type your response and press "ADD"</div>
+      <div class="box">3. Drag your diamond </div>
+    </div>
+  </div>
+
+<section id="section1">
+  <div class="input-area">
+    <input type="text" id="input1" placeholder="Your response|" />
+    <button onclick="addNode('section1')">ADD</button>
+  </div>
+  <div class="slider" id="slider1">
+    <div class="slider-line"></div>
+    <div class="slider-diamond" id="diamond1"></div>
+    <span class="slider-label left">Formal</span>
+  <span class="slider-label right">Slang</span>
+  </div>
+</section>
+
+<p class="paragraph2">Language is never neutral</p>
+
+<section id="section2">
+  <div class="input-area">
+    <input type="text" id="input2" placeholder="Your response|" />
+    <button onclick="addNode('section2')">ADD</button>
+  </div>
+  <div class="slider" id="slider2">
+    <div class="slider-line"></div>
+    <div class="slider-diamond" id="diamond2"></div>
+    <span class="slider-label left">Formal</span>
+  <span class="slider-label right">Slang</span>
+  </div>
+</section>
+
+<img id="poster2" src="poster2.jpg" alt="Description" width="1000" height="500">
+
+<section id="section3">
+  <div class="input-area">
+    <input type="text" id="input3" placeholder="Your response|" />
+    <button onclick="addNode('section3')">ADD</button>
+  </div>
+  <div class="slider" id="slider3">
+    <div class="slider-line"></div>
+    <div class="slider-diamond" id="diamond3"></div>
+    <span class="slider-label left">Formal</span>
+  <span class="slider-label right">Slang</span>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
+<script src="sketch.js"></script>
+
+<script>
+  document.addEventListener('scroll', () => {
+    const elements = document.querySelectorAll('.scroll-effect');
+    elements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+
+      if (isVisible) {
+        el.classList.add('in-view'); // Add the in-view class
+      } else {
+        el.classList.remove('in-view'); // Remove the in-view class
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
